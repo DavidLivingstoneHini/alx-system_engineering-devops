@@ -1,3 +1,2 @@
 #!/bin/bash
-dir=$(pwd -P)
-
+echo "$(cd "$(0x00-shell_basics "$1")"; pwd -P)/$(basename "$1")"
