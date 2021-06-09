@@ -1,1 +1,1 @@
-The echo $PATH script prints the current working directory
+The pwd script prints the current working directory
