@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
-# parses an Apache log file and displays the IP and HTTP code for each visitor, along with the number of occurences.
-
-awk '{print $1,$9}' apache-access.log | sort | uniq -c | sort -nr
+#groups visitors by IP and HTTP status code, and displays this data.
+#awk '{print $1 " " $9}' < apache-access.log | uniq -c | sort -r
+#cat apache-access.log | tr -c -d ' .0-9\n' | awk '{print $1,$(NF-1)}' | sort | uniq -c
+awk '{FS=" "; print $1,$9}' apache-access.log | sort | uniq -c | sort -gr

@@ -1,14 +1,12 @@
 #!/usr/bin/env bash
-# displays Holberton School 10 times.
-
-COUNTER=0
-while [ $COUNTER -lt 11 ]
-do
-    if [ $COUNTER = 9 ]
-    then
-        echo "Hi"
-    else
-        echo "Holberton School"
-    fi
-    let COUNTER+=1
-done
+#displays Best School 10 times, but for the 9th iteration, displays Best School and then Hi on a new line
+c=1
+while [[ $c -le 10 ]];
+	do
+	echo "Best School"
+	if [ $c -eq 9 ];
+		then
+		echo "Hi";
+	fi;
+	(( c++ ))
+done;
